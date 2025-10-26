@@ -1,18 +1,18 @@
-# 💳 Subscription Manager
+# 🛒 Grocery List & Expense Optimizer
 
 [![Python Version](https://img.shields.io/badge/python-3.8%2B-blue.svg)](https://python.org)
-[![License](https://img.shields.io/badge/license-MIT-green.svg)](LICENSE)
 
-A Python application for managing subscriptions with both CLI and GUI interfaces. Track monthly subscriptions, monitor renewal dates, analyze costs, and generate reports with visualizations.
+
+A Python application for managing grocery shopping, tracking expenses, and optimizing budgets with smart suggestions and analytics. Built with Rich CLI interface and matplotlib visualizations.
 
 ## ✨ Features
 
-- **Subscription Management**: Add, edit, delete, and search subscriptions
-- **Cost Tracking**: Monthly and annual cost calculation with category breakdown
-- **Renewal Monitoring**: Track upcoming renewals and overdue subscriptions
-- **Reports & Charts**: Generate reports and visualize subscription spending
-- **Dual Interfaces**: CLI for power users, GUI for easy use
-- **Data Visualization**: Pie charts, bar charts, and trend analysis
+- **Grocery Management**: Add, edit, delete items with price per unit, categories, and stores
+- **Expense Tracking**: Track spending by category, store, and time period
+- **Budget Monitoring**: Set weekly/monthly limits with alerts
+- **Charts & Reports**: Generate visualizations with pie charts, bar charts, and trends
+- **Search & Filter**: Find items by name, category, store, or price range
+- **Rich CLI**: Beautiful colored console output with tables
 
 ## 🚀 Quick Start
 
@@ -20,8 +20,8 @@ A Python application for managing subscriptions with both CLI and GUI interfaces
 
 ```bash
 # Clone the repository
-git clone https://github.com/debugfest/subscription-manager.git
-cd subscription-manager
+git clone https://github.com/debugfest/grocery-optimizer.git
+cd grocery-optimizer
 
 # Create virtual environment (optional)
 python -m venv venv
@@ -32,10 +32,7 @@ python -m venv venv
 pip install -r requirements.txt
 
 # Run the application
-python launcher.py          # Choose CLI or GUI
-# Or run directly:
-python main.py              # CLI interface
-python gui.py               # GUI interface
+python main.py
 ```
 
 ### Demo
@@ -46,41 +43,41 @@ python demo.py
 
 ## 📖 Usage
 
-**Choose Interface:**
-- CLI: Full-featured command-line interface
-- GUI: User-friendly graphical interface with buttons and tables
+**Main Sections:**
+- Grocery Items Management: Add, edit, delete items
+- Expense Tracking: Track spending by category and store
+- Budget Management: Set weekly/monthly limits with alerts
+- Reports & Visualizations: Generate charts and analytics
+- Search & Filter: Find items by name, category, store, or price
 
-**Key Features:**
-- Add subscriptions: Name, category, cost, renewal date, payment method
-- View total monthly/annual costs with category breakdown
-- Monitor upcoming renewals and overdue subscriptions
-- Generate reports: Summary, renewal, cost analysis charts
-- Search and filter by name, category, cost, or renewal date
+**Adding Items:**
+Enter item name, category, quantity, unit, price per unit, store name, and optional notes.
+
+**Reports:**
+Generate summary reports, spending by category/store charts, price distribution, trends, and budget comparison.
 
 ## 🏗️ Project Structure
 
-- **`main.py`**: CLI interface
-- **`gui.py`**: Tkinter GUI interface
-- **`launcher.py`**: Interface launcher script
-- **`subscription.py`**: Data model and database operations
-- **`report.py`**: Report generation and visualizations
-- **`utils.py`**: Validation and utility functions
+- **`main.py`**: CLI entry point with Rich library
+- **`grocery.py`**: Grocery items CRUD operations
+- **`expense.py`**: Spending calculations and analytics
+- **`reports.py`**: Report generation and matplotlib charts
+- **`utils.py`**: Validation and formatting functions
 - **`demo.py`**: Demo script with sample data
-- **`data/subscriptions.db`**: SQLite database (auto-created)
+- **`data/grocery_data.db`**: SQLite database (auto-created)
 - **`reports/`**: Generated reports and charts
 
 ## 🐛 Troubleshooting
 
 **Common Issues:**
-- Database errors: Ensure write permissions in project directory
-- GUI not displaying: Install `python3-tk` on Linux (`sudo apt-get install python3-tk`)
-- Import errors: Run `pip install -r requirements.txt` and verify Python 3.8+
+- Database errors: Ensure `data/` directory exists with write permissions
+- Chart generation fails: Run `pip install --upgrade matplotlib`
+- Import errors: Run `pip install -r requirements.txt`
 
 **Input Format:**
-- Renewal dates must be YYYY-MM-DD format (e.g., 2024-02-15)
-- Cost must be a positive number
-- Subscription name: 2-100 characters
-- Category: 2-50 characters
+- Price formats: `$10.50`, `₹100`, or `10.50`
+- Quantity: Numeric values like `2.5`, `1`, or `0.5`
+- Database created automatically on first run
 
 ## 🤝 Contributing
 
@@ -93,8 +90,9 @@ We welcome contributions! See [CONTRIBUTING.md](CONTRIBUTING.md) for guidelines.
 4. Push and open a Pull Request
 
 
-**Acknowledgments:** [Matplotlib](https://matplotlib.org/), [SQLite](https://www.sqlite.org/), [Tkinter](https://docs.python.org/3/library/tkinter.html)
+
+**Acknowledgments:** [Rich](https://github.com/Textualize/rich), [Matplotlib](https://matplotlib.org/), [SQLite](https://www.sqlite.org/)
 
 ---
 
-**Made with ❤️ for subscription management** 💳📊
+**Made with ❤️ for smart grocery shopping** 🛒💰
