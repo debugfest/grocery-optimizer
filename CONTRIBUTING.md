@@ -1,118 +1,98 @@
-# 🤝 Contributing to Subscription Manager
+# 🛒 Grocery List & Expense Optimizer
 
-Thank you for your interest in contributing! This guide will help you get started.
+[![Python Version](https://img.shields.io/badge/python-3.8%2B-blue.svg)](https://python.org)
 
-## 📜 Code of Conduct
 
-- Be respectful and inclusive
-- Accept constructive criticism gracefully
-- Focus on what's best for the community
+A Python application for managing grocery shopping, tracking expenses, and optimizing budgets with smart suggestions and analytics. Built with Rich CLI interface and matplotlib visualizations.
 
-## 🚀 Getting Started
+## ✨ Features
 
-**Prerequisites:** Python 3.8+, Git, GitHub account
+- **Grocery Management**: Add, edit, delete items with price per unit, categories, and stores
+- **Expense Tracking**: Track spending by category, store, and time period
+- **Budget Monitoring**: Set weekly/monthly limits with alerts
+- **Charts & Reports**: Generate visualizations with pie charts, bar charts, and trends
+- **Search & Filter**: Find items by name, category, store, or price range
+- **Rich CLI**: Beautiful colored console output with tables
 
-**Setup:**
+## 🚀 Quick Start
+
+### Installation
+
 ```bash
-# Fork and clone the repository
-git clone https://github.com/yourusername/subscription-manager.git
-cd subscription-manager
+# Clone the repository
+git clone https://github.com/debugfest/grocery-optimizer.git
+cd grocery-optimizer
 
-# Add upstream remote
-git remote add upstream https://github.com/debugfest/subscription-manager.git
-
-# Create virtual environment
+# Create virtual environment (optional)
 python -m venv venv
 # Windows: venv\Scripts\activate
 # macOS/Linux: source venv/bin/activate
 
 # Install dependencies
 pip install -r requirements.txt
-pip install pytest pytest-cov black flake8 mypy
 
-# Verify installation
-python launcher.py        # Choose interface
-python demo.py            # Run demo
-pytest                    # Run tests
+# Run the application
+python main.py
 ```
 
-## 📁 Project Structure
+### Demo
 
-- **`main.py`**: CLI interface and user interaction
-- **`gui.py`**: Tkinter GUI interface
-- **`launcher.py`**: Interface launcher
-- **`subscription.py`**: Data model and database operations
-- **`report.py`**: Report generation and visualizations
-- **`utils.py`**: Validation and utility functions
+```bash
+python demo.py
+```
+
+## 📖 Usage
+
+**Main Sections:**
+- Grocery Items Management: Add, edit, delete items
+- Expense Tracking: Track spending by category and store
+- Budget Management: Set weekly/monthly limits with alerts
+- Reports & Visualizations: Generate charts and analytics
+- Search & Filter: Find items by name, category, store, or price
+
+**Adding Items:**
+Enter item name, category, quantity, unit, price per unit, store name, and optional notes.
+
+**Reports:**
+Generate summary reports, spending by category/store charts, price distribution, trends, and budget comparison.
+
+## 🏗️ Project Structure
+
+- **`main.py`**: CLI entry point with Rich library
+- **`grocery.py`**: Grocery items CRUD operations
+- **`expense.py`**: Spending calculations and analytics
+- **`reports.py`**: Report generation and matplotlib charts
+- **`utils.py`**: Validation and formatting functions
 - **`demo.py`**: Demo script with sample data
+- **`data/grocery_data.db`**: SQLite database (auto-created)
+- **`reports/`**: Generated reports and charts
 
-## 📝 How to Contribute
+## 🐛 Troubleshooting
 
-**We welcome:**
-- 🐛 Bug fixes
-- ✨ New features
-- 📚 Documentation improvements
-- 🧪 Tests and test coverage
-- 🎨 UI/UX enhancements
-- ⚡ Performance optimizations
-- 🔧 Code refactoring
+**Common Issues:**
+- Database errors: Ensure `data/` directory exists with write permissions
+- Chart generation fails: Run `pip install --upgrade matplotlib`
+- Import errors: Run `pip install -r requirements.txt`
 
-## 🔄 Pull Request Process
+**Input Format:**
+- Price formats: `$10.50`, `₹100`, or `10.50`
+- Quantity: Numeric values like `2.5`, `1`, or `0.5`
+- Database created automatically on first run
 
-**Steps:**
-1. Create feature branch: `git checkout -b feature/your-feature-name`
-2. Make changes following coding standards
-3. Add tests for new functionality
-4. Run tests and linting:
-   ```bash
-   pytest
-   flake8 subscription_manager/
-   black --check subscription_manager/
-   mypy subscription_manager/
-   ```
-5. Commit and push: `git push origin feature/your-feature-name`
+## 🤝 Contributing
 
-**PR Checklist:**
-- [ ] Code follows coding standards
-- [ ] Tests added/updated
-- [ ] Documentation updated
-- [ ] All tests pass
-- [ ] No linting errors
+We welcome contributions! See [CONTRIBUTING.md](CONTRIBUTING.md) for guidelines.
 
-## 🐛 Issue Guidelines
+**Quick Start:**
+1. Fork the repository
+2. Create a feature branch
+3. Commit your changes
+4. Push and open a Pull Request
 
-**Bug Reports:**
-- Clear title and description
-- Steps to reproduce
-- Expected vs actual behavior
-- Environment details (OS, Python version)
-- Error messages and stack traces
 
-**Feature Requests:**
-- Clear description and use case
-- Proposed solution
-- Alternatives considered
 
-**Labels:** `bug`, `enhancement`, `documentation`, `good first issue`, `help wanted`
-
-## 📚 Resources
-
-- [Python Docs](https://docs.python.org/3/)
-- [Matplotlib](https://matplotlib.org/)
-- [SQLite](https://www.sqlite.org/docs.html)
-- [Tkinter](https://docs.python.org/3/library/tkinter.html)
-- [Pytest](https://docs.pytest.org/)
-- [Black](https://black.readthedocs.io/)
-- [Flake8](https://flake8.pycqa.org/)
-- [MyPy](https://mypy.readthedocs.io/)
-
-## 💬 Getting Help
-
-- Check existing issues
-- Read documentation and code comments
-- Create a new issue with details
-- Join GitHub Discussions
+**Acknowledgments:** [Rich](https://github.com/Textualize/rich), [Matplotlib](https://matplotlib.org/), [SQLite](https://www.sqlite.org/)
 
 ---
 
-**Thank you for contributing!** 💳📊
+**Made with ❤️ for smart grocery shopping** 🛒💰
